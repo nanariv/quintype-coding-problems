@@ -1,4 +1,5 @@
-# Diamond Sweeper
+# Diamond Sweeper/Hunter
+A simple UI based game where the user plays to find hidden diamonds.
 
 ## Problem Statement
 

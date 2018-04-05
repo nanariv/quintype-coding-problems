@@ -1,24 +1,46 @@
-table.diamondsweeper-board {
-  td {
-    padding: 0;
-    border: 1px solid black;
-  }
+*, *:before, *:after {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
+.game-heading {
+  text-align: center;
+}
+#container {
+  .diamondsweeper-board {
+    width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    overflow: hidden;
+    .cell-row {
+      width: 800px;
+      overflow: hidden;
+      .cell {
+        height: 50px;
+        width: 100px;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-collapse: collapse;
+        vertical-align: top;
+        float: left;
+        &.diamond {
+          background: url(/assets/diamond.png) no-repeat center;
+                  background-size: contain;
+        }
 
-.cell {
-  height: 50px;
-  width: 50px;
-  background-size: 50px 50px;
+        &.arrow {
+          background: url(/assets/arrow.png) no-repeat center;
+                  background-size: contain;
+        }
 
-  &.diamond {
-    background-image: url(diamond.png);
-  }
-
-  &.arrow {
-    background-image: url(arrow.png);
-  }
-
-  &.unknown {
-    background-image: url(question.png);
+        &.unknown {
+          background: url(/assets/question.png) no-repeat center;
+                  background-size: contain;
+        }
+      } 
+    }
   }
 }
